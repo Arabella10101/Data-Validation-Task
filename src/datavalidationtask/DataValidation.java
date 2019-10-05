@@ -1,10 +1,12 @@
+///Arabella Balidis
 
 package datavalidationtask;
 
 import java.util.Date;
 
-public class datavalid {
-    
+public class DataValidation {
+        
+    //Tests to see if String is only letters
     public boolean testforAlphabets(String st)
     {
         boolean tf=true;      
@@ -19,7 +21,8 @@ public class datavalid {
         }       
         return tf;       
     }
- 
+    
+    //Tests if a gender is selected
     public boolean mfcheck(boolean m,boolean f)
     {
         boolean tf=true;
@@ -30,6 +33,7 @@ public class datavalid {
         return tf;
     }
     
+    //Tests if String consists of digits
     public boolean testNumbers(String num)
     {
         boolean tf=true;
@@ -45,6 +49,7 @@ public class datavalid {
         return tf;
     }
     
+    //Tests the range of the height
     public boolean testRange(String num)
     {
       boolean tf=true;  
@@ -57,6 +62,7 @@ public class datavalid {
         return tf;
     }
     
+    //Tests length of the ID Number
     public boolean testID(String idNum)
     {
         boolean tf=true;
@@ -69,6 +75,8 @@ public class datavalid {
 
         return tf;
     }
+    
+    //Tests that the date is not in the future
     public boolean testDate(Date dob)
     {
         boolean tf=true;
@@ -81,5 +89,5 @@ public class datavalid {
         
         return tf;
     }
-           
+
 }

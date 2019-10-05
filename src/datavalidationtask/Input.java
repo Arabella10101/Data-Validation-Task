@@ -19,50 +19,50 @@ DataValidation objDataValid = new DataValidation();
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        namelbl = new javax.swing.JLabel();
-        namefield = new javax.swing.JTextField();
-        surnamelbl = new javax.swing.JLabel();
-        surnamefield = new javax.swing.JTextField();
-        malebtn = new javax.swing.JRadioButton();
-        femalebtn = new javax.swing.JRadioButton();
-        capdetails = new javax.swing.JButton();
-        htlbl = new javax.swing.JLabel();
-        hgtfield = new javax.swing.JTextField();
-        DOBjDateChooser = new com.toedter.calendar.JDateChooser();
-        IDNumField = new javax.swing.JTextField();
-        IDlbl = new javax.swing.JLabel();
-        DOBlbl = new javax.swing.JLabel();
-        Title = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        lblSurname = new javax.swing.JLabel();
+        txtSurname = new javax.swing.JTextField();
+        radiobtnMale = new javax.swing.JRadioButton();
+        radiobtnFemale = new javax.swing.JRadioButton();
+        btnCaptureDetails = new javax.swing.JButton();
+        lblHeight = new javax.swing.JLabel();
+        txtHeight = new javax.swing.JTextField();
+        dateChooserDOB = new com.toedter.calendar.JDateChooser();
+        txtIDNum = new javax.swing.JTextField();
+        lblIDNumber = new javax.swing.JLabel();
+        lblDOB = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        namelbl.setText("Name");
+        lblName.setText("Name");
 
-        surnamelbl.setText("Surname");
+        lblSurname.setText("Surname");
 
-        buttonGroup1.add(malebtn);
-        malebtn.setText("male");
+        buttonGroup1.add(radiobtnMale);
+        radiobtnMale.setText("male");
 
-        buttonGroup1.add(femalebtn);
-        femalebtn.setText("female");
+        buttonGroup1.add(radiobtnFemale);
+        radiobtnFemale.setText("female");
 
-        capdetails.setText("capture details");
-        capdetails.addActionListener(new java.awt.event.ActionListener() {
+        btnCaptureDetails.setText("capture details");
+        btnCaptureDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                capdetailsActionPerformed(evt);
+                btnCaptureDetailsActionPerformed(evt);
             }
         });
 
-        htlbl.setText("Height ");
+        lblHeight.setText("Height ");
 
-        IDNumField.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txtIDNum.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        IDlbl.setText("ID Number ");
+        lblIDNumber.setText("ID Number ");
 
-        DOBlbl.setText("Date of Birth");
+        lblDOB.setText("Date of Birth");
 
-        Title.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        Title.setText("Enter your details");
+        lblTitle.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblTitle.setText("Enter your details");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -70,63 +70,63 @@ DataValidation objDataValid = new DataValidation();
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(capdetails)
+                .addComponent(btnCaptureDetails)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(DOBlbl)
-                            .addComponent(IDlbl)
-                            .addComponent(htlbl)
-                            .addComponent(malebtn)
-                            .addComponent(surnamelbl)
-                            .addComponent(namelbl))
+                            .addComponent(lblDOB)
+                            .addComponent(lblIDNumber)
+                            .addComponent(lblHeight)
+                            .addComponent(radiobtnMale)
+                            .addComponent(lblSurname)
+                            .addComponent(lblName))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(surnamefield, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(femalebtn)
-                            .addComponent(IDNumField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(DOBjDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hgtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(namefield, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtSurname, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radiobtnFemale)
+                            .addComponent(txtIDNum, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dateChooserDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
-                        .addComponent(Title)))
+                        .addComponent(lblTitle)))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Title)
+                .addComponent(lblTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(namefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(namelbl))
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblName))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(surnamefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(surnamelbl))
+                    .addComponent(txtSurname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSurname))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(femalebtn)
-                    .addComponent(malebtn))
+                    .addComponent(radiobtnFemale)
+                    .addComponent(radiobtnMale))
                 .addGap(5, 5, 5)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(hgtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(htlbl))
+                    .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblHeight))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(IDNumField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(IDlbl))
+                    .addComponent(txtIDNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblIDNumber))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(DOBlbl)
-                    .addComponent(DOBjDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblDOB)
+                    .addComponent(dateChooserDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(capdetails)
+                .addComponent(btnCaptureDetails)
                 .addGap(134, 134, 134))
         );
 
@@ -146,14 +146,14 @@ DataValidation objDataValid = new DataValidation();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void capdetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capdetailsActionPerformed
-        String fn = namefield.getText();        
-        String sn =surnamefield.getText();       
-        boolean m= malebtn.isSelected();
-        boolean f= femalebtn.isSelected();
-        String hgt = hgtfield.getText();
-        String idNum = IDNumField.getText();
-        Date dob = DOBjDateChooser.getDate();
+    private void btnCaptureDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCaptureDetailsActionPerformed
+        String fn = txtName.getText();        
+        String sn =txtSurname.getText();       
+        boolean m= radiobtnMale.isSelected();
+        boolean f= radiobtnFemale.isSelected();
+        String hgt = txtHeight.getText();
+        String idNum = txtIDNum.getText();
+        Date dob = dateChooserDOB.getDate();
         int c1=0;
                
         //Validation of Surname
@@ -271,7 +271,7 @@ DataValidation objDataValid = new DataValidation();
             JOptionPane.showMessageDialog(null, "Captured");
         }
                
-    }//GEN-LAST:event_capdetailsActionPerformed
+    }//GEN-LAST:event_btnCaptureDetailsActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -306,21 +306,21 @@ DataValidation objDataValid = new DataValidation();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.toedter.calendar.JDateChooser DOBjDateChooser;
-    private javax.swing.JLabel DOBlbl;
-    private javax.swing.JTextField IDNumField;
-    private javax.swing.JLabel IDlbl;
-    private javax.swing.JLabel Title;
+    private javax.swing.JButton btnCaptureDetails;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton capdetails;
-    private javax.swing.JRadioButton femalebtn;
-    private javax.swing.JTextField hgtfield;
-    private javax.swing.JLabel htlbl;
+    private com.toedter.calendar.JDateChooser dateChooserDOB;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton malebtn;
-    private javax.swing.JTextField namefield;
-    private javax.swing.JLabel namelbl;
-    private javax.swing.JTextField surnamefield;
-    private javax.swing.JLabel surnamelbl;
+    private javax.swing.JLabel lblDOB;
+    private javax.swing.JLabel lblHeight;
+    private javax.swing.JLabel lblIDNumber;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblSurname;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JRadioButton radiobtnFemale;
+    private javax.swing.JRadioButton radiobtnMale;
+    private javax.swing.JTextField txtHeight;
+    private javax.swing.JTextField txtIDNum;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtSurname;
     // End of variables declaration//GEN-END:variables
 }
