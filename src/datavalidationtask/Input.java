@@ -7,7 +7,7 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class Input extends javax.swing.JFrame {
-datavalid ad = new datavalid();
+DataValidation objDataValid = new DataValidation();
 
     public Input() {
         initComponents();
@@ -163,7 +163,7 @@ datavalid ad = new datavalid();
         }
         else
         {
-        boolean testName1=ad.testforAlphabets(sn);
+        boolean testName1=objDataValid.testforAlphabets(sn);
         if (testName1==false) 
         {
             JOptionPane.showMessageDialog(null, "Surname cannot contain numbers or special characters");
@@ -181,7 +181,7 @@ datavalid ad = new datavalid();
         }
         else
         {
-        boolean testName2=ad.testforAlphabets(fn);
+        boolean testName2=objDataValid.testforAlphabets(fn);
         if (testName2==false) 
         {
             JOptionPane.showMessageDialog(null, "Name cannot contain numbers or special characters");
@@ -193,7 +193,7 @@ datavalid ad = new datavalid();
         }
         
         //Validation of Gender
-        if (ad.mfcheck(m, f)==false) 
+        if (objDataValid.mfcheck(m, f)==false) 
         {
             JOptionPane.showMessageDialog(null, "A gender must be selected");
         }
@@ -209,13 +209,13 @@ datavalid ad = new datavalid();
         }
         else
         {
-            if (ad.testNumbers(hgt)==false) 
+            if (objDataValid.testNumbers(hgt)==false) 
             { 
                 JOptionPane.showMessageDialog(null, "Height must be a number");
             }
             else
             {
-                    if (ad.testRange(hgt)==false) 
+                    if (objDataValid.testRange(hgt)==false) 
                     {
                     JOptionPane.showMessageDialog(null, "Height must be within the range of 100-300cm. Ensure height is in cm");    
                     }
@@ -233,13 +233,13 @@ datavalid ad = new datavalid();
         }
         else
         {
-            if (ad.testNumbers(idNum)==false) 
+            if (objDataValid.testNumbers(idNum)==false) 
             {
                 JOptionPane.showMessageDialog(null, "ID must be a number");
             }
             else
             {
-                if (ad.testID(idNum)==false) 
+                if (objDataValid.testID(idNum)==false) 
                 {
                     JOptionPane.showMessageDialog(null, "ID must be 13 digits long");
                 }
@@ -257,7 +257,7 @@ datavalid ad = new datavalid();
         }
         else
         {
-            if (ad.testDate(dob)==false) {
+            if (objDataValid.testDate(dob)==false) {
                 JOptionPane.showMessageDialog(null, "Date of birth cannot be in the future");
             }
             else
