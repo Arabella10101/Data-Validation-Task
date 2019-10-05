@@ -137,9 +137,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="surnamefield">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="surnamefieldActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="malebtn">
           <Properties>
@@ -148,9 +145,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="male"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="malebtnActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="femalebtn">
           <Properties>
@@ -183,13 +177,10 @@
               <Font name="Calibri" size="16" style="0"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IDNumFieldActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="IDlbl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="ID "/>
+            <Property name="text" type="java.lang.String" value="ID Number "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="DOBlbl">

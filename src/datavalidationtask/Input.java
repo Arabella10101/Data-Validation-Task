@@ -1,10 +1,8 @@
 
 package datavalidationtask;
 
-/**
- *
- * @author 20baliar
- */
+//Arabella Balidis
+
 import java.util.Date;
 import javax.swing.JOptionPane;
 
@@ -42,19 +40,8 @@ datavalid ad = new datavalid();
 
         surnamelbl.setText("Surname");
 
-        surnamefield.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                surnamefieldActionPerformed(evt);
-            }
-        });
-
         buttonGroup1.add(malebtn);
         malebtn.setText("male");
-        malebtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                malebtnActionPerformed(evt);
-            }
-        });
 
         buttonGroup1.add(femalebtn);
         femalebtn.setText("female");
@@ -69,13 +56,8 @@ datavalid ad = new datavalid();
         htlbl.setText("Height ");
 
         IDNumField.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        IDNumField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IDNumFieldActionPerformed(evt);
-            }
-        });
 
-        IDlbl.setText("ID ");
+        IDlbl.setText("ID Number ");
 
         DOBlbl.setText("Date of Birth");
 
@@ -164,10 +146,6 @@ datavalid ad = new datavalid();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void surnamefieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_surnamefieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_surnamefieldActionPerformed
-
     private void capdetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_capdetailsActionPerformed
         String fn = namefield.getText();        
         String sn =surnamefield.getText();       
@@ -177,7 +155,8 @@ datavalid ad = new datavalid();
         String idNum = IDNumField.getText();
         Date dob = DOBjDateChooser.getDate();
         int c1=0;
-        
+               
+        //Validation of Surname
         if (sn.contentEquals("")) 
         {
             JOptionPane.showMessageDialog(null, "Surname cannot be blank");
@@ -195,6 +174,7 @@ datavalid ad = new datavalid();
         }
         }
         
+        //Validation of Name
         if (fn.contentEquals("")) 
         {
             JOptionPane.showMessageDialog(null, "Name cannot be blank");
@@ -212,6 +192,7 @@ datavalid ad = new datavalid();
         }
         }
         
+        //Validation of Gender
         if (ad.mfcheck(m, f)==false) 
         {
             JOptionPane.showMessageDialog(null, "A gender must be selected");
@@ -221,6 +202,7 @@ datavalid ad = new datavalid();
             c1++;
         }
         
+        //Validation of Height
         if (hgt.contentEquals("")) 
         {
             JOptionPane.showMessageDialog(null, "Height cannot be blank");
@@ -243,7 +225,8 @@ datavalid ad = new datavalid();
                     }               
             }
         }
-                
+        
+        //Validation of ID
         if (idNum.contentEquals("")) 
         {
             JOptionPane.showMessageDialog(null, "ID cannot be blank");
@@ -267,7 +250,7 @@ datavalid ad = new datavalid();
             }
         }
 
-        
+        //Validation Of Date of Birth
         if (dob==null) 
         {
             JOptionPane.showMessageDialog(null, "Date of birth cannot be blank");
@@ -289,14 +272,6 @@ datavalid ad = new datavalid();
         }
                
     }//GEN-LAST:event_capdetailsActionPerformed
-
-    private void malebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_malebtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_malebtnActionPerformed
-
-    private void IDNumFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDNumFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IDNumFieldActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
