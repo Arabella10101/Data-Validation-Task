@@ -384,7 +384,7 @@ DataValidation objDataValid = new DataValidation();
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnValidateDetails;
     private javax.swing.ButtonGroup buttonGroup1;

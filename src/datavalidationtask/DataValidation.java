@@ -12,7 +12,7 @@ public class DataValidation {
         boolean tf=true;      
         for (int i = 0; i < st.length(); i++) 
         {
-            int ordval=(int) st.toLowerCase().charAt(i);
+            int ordval=(int) st.toLowerCase().trim().charAt(i);
             if (!(ordval<=122 && ordval>=97)) 
             {
                 tf=false;
