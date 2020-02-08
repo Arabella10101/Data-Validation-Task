@@ -49,6 +49,17 @@ public class DataValidation {
         return tf;
     }
     
+    //Tests if there is a decimal point or comma
+    public boolean testDecimalCommma(String num)
+    {
+        boolean tf=true;
+        if (num.contains(".") || num.contains(",")) {
+            tf=false;
+        }
+        
+        return tf;
+    }
+    
     //Tests the range of the height
     public boolean testRange(String num)
     {

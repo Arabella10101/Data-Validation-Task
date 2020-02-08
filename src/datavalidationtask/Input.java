@@ -29,7 +29,6 @@ DataValidation objDataValid = new DataValidation();
         btnValidateDetails = new javax.swing.JButton();
         lblHeight = new javax.swing.JLabel();
         txtHeight = new javax.swing.JTextField();
-        dateChooserDOB = new com.toedter.calendar.JDateChooser();
         txtIDNum = new javax.swing.JTextField();
         lblIDNumber = new javax.swing.JLabel();
         lblDOB = new javax.swing.JLabel();
@@ -41,6 +40,7 @@ DataValidation objDataValid = new DataValidation();
         lblIDNumberErrorMsg = new javax.swing.JLabel();
         lblDOBErrorMsg = new javax.swing.JLabel();
         lblValidated = new javax.swing.JLabel();
+        dateChooserDOB = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,10 +125,10 @@ DataValidation objDataValid = new DataValidation();
                             .addComponent(lblGenderErrorMsg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblHeightErrorMsg, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(dateChooserDOB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtIDNum)
-                            .addComponent(btnValidateDetails))
+                            .addComponent(btnValidateDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -177,13 +177,15 @@ DataValidation objDataValid = new DataValidation();
                         .addComponent(lblIDNumber)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblDOBErrorMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDOB)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblDOBErrorMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDOB))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblValidated, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnValidateDetails)))
                     .addComponent(dateChooserDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblValidated, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnValidateDetails))
                 .addGap(259, 259, 259))
         );
 
@@ -277,24 +279,31 @@ DataValidation objDataValid = new DataValidation();
         }
         else
         {
-            if (objDataValid.testNumbers(hgt)==false) 
-            { 
-                lblHeightErrorMsg.setText("Height must be a number");
-                lblValidated.setText("");   
-            }
+            if (objDataValid.testDecimalCommma(hgt)==false) 
+                {
+                    lblHeightErrorMsg.setText("Ensure height is in cm");
+                }
             else
             {
+                if (objDataValid.testNumbers(hgt)==false) 
+                    { 
+                        lblHeightErrorMsg.setText("Height must be a number");
+                        lblValidated.setText("");   
+                    }
+                else
+                {               
                     if (objDataValid.testRange(hgt)==false) 
                     {
                         lblHeightErrorMsg.setText("Height must be within the "
-                                +"range of 100-300cm. Ensure height is in cm");
+                                +"range of 100-300cm.");
                         lblValidated.setText("");   
                     }
                     else
                     {
                         counter++;  
                         lblHeightErrorMsg.setText("");
-                    }               
+                    }                    
+                }
             }
         }
         
